@@ -14,14 +14,12 @@ interface Props {
 const { values } = Astro.props as Props;
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-  {
-    values.map((value) => (
-      <ValueItem
-        title={value.title}
-        description={value.description}
-        icon={value.icon}
-      />
-    ))
-  }
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+  {values.map((value) => (
+    <ValueItem
+      title={value.title}
+      description={value.description}
+      icon={value.icon}
+    />
+  ))}
 </div>

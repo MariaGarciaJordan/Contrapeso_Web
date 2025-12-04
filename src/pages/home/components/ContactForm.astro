@@ -1,42 +1,59 @@
 ---
 interface Props {
-  // Por ahora no hay props, pero dejamos la interfaz creada.
+  // Reservado para futuras props (estado, mensajes, etc.).
 }
 
 ---
 
-<form class="flex flex-col gap-4 max-w-lg bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-
-  <label class="flex flex-col gap-1">
-    <span class="text-sm font-medium text-gray-700">Nombre</span>
+<form 
+  class="w-full max-w-md bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col gap-5"
+  novalidate
+>
+  <div class="flex flex-col gap-1">
+    <label for="name" class="text-sm font-medium text-gray-800">
+      Nombre
+    </label>
     <input 
+      id="name"
+      name="name"
       type="text" 
       placeholder="Tu nombre"
-      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-red-600"
+      required
+      class="border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-red-700 focus:ring-2 focus:ring-red-200"
     />
-  </label>
+  </div>
 
-  <label class="flex flex-col gap-1">
-    <span class="text-sm font-medium text-gray-700">Email</span>
+  <div class="flex flex-col gap-1">
+    <label for="email" class="text-sm font-medium text-gray-800">
+      Email
+    </label>
     <input 
+      id="email"
+      name="email"
       type="email" 
       placeholder="tu@email.com"
-      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-red-600"
+      required
+      class="border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-red-700 focus:ring-2 focus:ring-red-200"
     />
-  </label>
+  </div>
 
-  <label class="flex flex-col gap-1">
-    <span class="text-sm font-medium text-gray-700">Mensaje</span>
+  <div class="flex flex-col gap-1">
+    <label for="message" class="text-sm font-medium text-gray-800">
+      Mensaje
+    </label>
     <textarea 
+      id="message"
+      name="message"
       placeholder="¿En qué podemos ayudarte?"
-      class="border border-gray-300 rounded-md px-3 py-2 h-28 resize-none focus:outline-none focus:border-red-600"
+      required
+      class="border border-gray-300 rounded-md px-3 py-2 h-28 resize-none text-sm focus:outline-none focus:border-red-700 focus:ring-2 focus:ring-red-200"
     ></textarea>
-  </label>
+  </div>
 
   <button 
     type="submit"
-    class="mt-4 px-6 py-3 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition">
+    class="mt-2 w-full px-6 py-3 bg-red-700 text-white text-sm font-medium rounded-md hover:bg-red-800 transition"
+  >
     Enviar mensaje
   </button>
-
 </form>

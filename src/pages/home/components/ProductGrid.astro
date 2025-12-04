@@ -1,7 +1,6 @@
 ---
 import ProductCard from "./ProductCard.astro";
 
-// Definimos el tipo de producto
 interface Product {
   name: string;
   description: string;
@@ -9,16 +8,14 @@ interface Product {
   image: string;
 }
 
-// Definimos el tipo de las props del componente
 interface Props {
   products: Product[];
 }
 
-// Tipamos Astro.props
 const { products } = Astro.props as Props;
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
   {
     products.map((product) => (
       <ProductCard

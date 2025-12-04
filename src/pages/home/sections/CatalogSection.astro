@@ -1,7 +1,6 @@
 ---
 import ProductGrid from "../components/ProductGrid.astro";
 
-// Datos estáticos provisionales
 const products = [
   {
     name: "Lomo alto madurado",
@@ -24,8 +23,10 @@ const products = [
 ];
 ---
 
-<section id="catalogo" class="px-8 py-20">
-  <h2 class="text-3xl font-semibold mb-6">Catálogo Destacado</h2>
+<section id="catalogo" class="px-8 py-24 bg-white">
+  <h2 class="text-4xl font-bold text-gray-900 mb-10 tracking-tight">
+    Catálogo destacado
+  </h2>
 
   <ProductGrid products={products} />
 </section>
