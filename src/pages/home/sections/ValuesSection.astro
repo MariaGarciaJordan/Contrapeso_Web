@@ -1,0 +1,36 @@
+---
+import ValueGrid from "../components/ValueGrid.astro";
+
+const values = [
+  {
+    title: "Selección en origen",
+    description: "Trabajamos directamente con productores responsables para garantizar calidad y trazabilidad.",
+  },
+  {
+    title: "Maduración controlada",
+    description: "Cortes madurados en cámara para potenciar sabor y textura.",
+  },
+  {
+    title: "Bienestar animal",
+    description: "Compromiso con prácticas respetuosas para asegurar calidad real.",
+  },
+  {
+    title: "Cortes a medida",
+    description: "Preparamos tus piezas según tus necesidades: grosor, formato y presentación.",
+  },
+  {
+    title: "Cadena de frío garantizada",
+    description: "Envíos refrigerados con conservación óptima hasta tu puerta.",
+  },
+  {
+    title: "Artesanía moderna",
+    description: "Tradición cárnica combinada con técnicas actuales.",
+  },
+];
+---
+
+<section class="px-8 py-20 bg-gray-50">
+  <h2 class="text-3xl font-semibold mb-8">Nuestros Valores</h2>
+
+  <ValueGrid values={values} />
+</section>

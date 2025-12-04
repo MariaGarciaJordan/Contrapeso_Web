@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+  price: number;
+  qty: number;
+  image: string;
+}
+
+const { name, price, qty, image } = Astro.props as Props;
+---
+
+<div class="flex items-center gap-4 border-b border-gray-200 pb-3">
+  <img src={image} alt={name} class="w-14 h-14 object-cover rounded-md" />
+
+  <div class="flex flex-col">
+    <span class="font-medium">{name}</span>
+    <span class="text-sm text-gray-600">{qty} ud</span>
+  </div>
+
+  <span class="ml-auto font-semibold text-gray-900">{price}€</span>
+</div>

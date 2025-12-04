@@ -1,0 +1,31 @@
+---
+import ProductGrid from "../components/ProductGrid.astro";
+
+// Datos estáticos provisionales
+const products = [
+  {
+    name: "Lomo alto madurado",
+    description: "Corte premium con 30 días de maduración.",
+    price: 22.50,
+    image: "/images/products/lomo-alto.jpg"
+  },
+  {
+    name: "Chuletón selección especial",
+    description: "Corte grueso y jugoso para ocasiones especiales.",
+    price: 32.00,
+    image: "/images/products/chuleton.jpg"
+  },
+  {
+    name: "Solomillo de ternera",
+    description: "Ternura excepcional y sabor delicado.",
+    price: 28.90,
+    image: "/images/products/solomillo.jpg"
+  }
+];
+---
+
+<section id="catalogo" class="px-8 py-20">
+  <h2 class="text-3xl font-semibold mb-6">Catálogo Destacado</h2>
+
+  <ProductGrid products={products} />
+</section>

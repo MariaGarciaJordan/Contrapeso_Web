@@ -1,0 +1,42 @@
+---
+interface Props {
+  // Por ahora no hay props, pero dejamos la interfaz creada.
+}
+
+---
+
+<form class="flex flex-col gap-4 max-w-lg bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+
+  <label class="flex flex-col gap-1">
+    <span class="text-sm font-medium text-gray-700">Nombre</span>
+    <input 
+      type="text" 
+      placeholder="Tu nombre"
+      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-red-600"
+    />
+  </label>
+
+  <label class="flex flex-col gap-1">
+    <span class="text-sm font-medium text-gray-700">Email</span>
+    <input 
+      type="email" 
+      placeholder="tu@email.com"
+      class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-red-600"
+    />
+  </label>
+
+  <label class="flex flex-col gap-1">
+    <span class="text-sm font-medium text-gray-700">Mensaje</span>
+    <textarea 
+      placeholder="¿En qué podemos ayudarte?"
+      class="border border-gray-300 rounded-md px-3 py-2 h-28 resize-none focus:outline-none focus:border-red-600"
+    ></textarea>
+  </label>
+
+  <button 
+    type="submit"
+    class="mt-4 px-6 py-3 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition">
+    Enviar mensaje
+  </button>
+
+</form>

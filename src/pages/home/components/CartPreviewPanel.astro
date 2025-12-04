@@ -1,0 +1,28 @@
+---
+import CartItem from "./CartItem.astro";
+
+// Items dummy para vista previa
+const items = [
+  { name: "Lomo alto", price: 22.5, qty: 1, image: "/images/products/lomo-alto.jpg" },
+  { name: "Solomillo", price: 28.9, qty: 2, image: "/images/products/solomillo.jpg" },
+];
+---
+
+<div class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl border-l border-gray-200 p-6 flex flex-col gap-6">
+  <h2 class="text-xl font-semibold">Tu carrito</h2>
+
+  <div class="flex flex-col gap-4 overflow-y-auto">
+    {items.map(item => (
+      <CartItem 
+        name={item.name}
+        price={item.price}
+        qty={item.qty}
+        image={item.image}
+      />
+    ))}
+  </div>
+
+  <button class="mt-auto w-full py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+    Finalizar pedido
+  </button>
+</div>
