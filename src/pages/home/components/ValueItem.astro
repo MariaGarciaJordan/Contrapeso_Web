@@ -8,24 +8,20 @@ interface Props {
 const { title, description, icon } = Astro.props as Props;
 ---
 
-<div class="flex flex-col gap-4">
-  
-  <!-- Icono -->
-  <div class="w-12 h-12 flex items-center justify-center rounded-md bg-red-100">
-    {icon ? (
-      <img src={icon} alt={title} class="w-8 h-8 object-contain opacity-90" />
-    ) : (
-      <span class="material-icons text-red-700 text-4xl">verified</span>
-    )}
-  </div>
+<div
+  class="w-full max-w-sm bg-white/90 backdrop-blur-sm rounded-xl border border-gray-200 
+         shadow-md p-6 flex flex-col gap-3 text-center hover:shadow-xl transition"
+>
+  <!-- ICONO (si en el futuro agregamos) -->
+  {icon && (
+    <img src={icon} alt={title} class="w-12 h-12 mx-auto opacity-90" />
+  )}
 
-  <!-- Título -->
-  <h3 class="text-xl font-semibold text-gray-900 leading-tight">
+  <h3 class="text-xl font-semibold text-gray-900">
     {title}
   </h3>
 
-  <!-- Descripción -->
-  <p class="text-gray-600 text-sm leading-relaxed">
+  <p class="text-gray-700 text-sm leading-relaxed">
     {description}
   </p>
 </div>

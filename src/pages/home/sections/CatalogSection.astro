@@ -23,10 +23,16 @@ const products = [
 ];
 ---
 
-<section id="catalogo" class="px-8 py-24 bg-white">
-  <h2 class="text-4xl font-bold text-gray-900 mb-10 tracking-tight">
-    Catálogo destacado
-  </h2>
+<section class="px-4 sm:px-8 py-28">
+  <div
+    class="max-w-7xl mx-auto bg-white/15 backdrop-blur-xl 
+           rounded-3xl shadow-2xl border border-white/20
+           px-10 sm:px-20 py-20"
+  >
+    <h2 class="text-center text-4xl font-bold text-gray-100 mb-14 tracking-tight">
+      Catálogo destacado
+    </h2>
 
-  <ProductGrid products={products} />
+    <ProductGrid products={products} />
+  </div>
 </section>
